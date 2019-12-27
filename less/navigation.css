@@ -1,11 +1,29 @@
+nav {
+  display: flex;
+}
 nav h2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
   font-size: 4rem;
-  margin: 2% 43%;
 }
 nav ul {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  font-size: 3rem;
+  margin: 2% 10%;
   justify-content: space-between;
-  font-size: 2rem;
-  margin: 2% 30%;
+}
+@media ( max-width: 500px ) {
+  nav h2 {
+    display: inline-block;
+    margin-left: 25%;
+  }
+  nav ul {
+    flex-direction: row;
+    margin: 0%;
+    font-size: 2em;
+  }
 }

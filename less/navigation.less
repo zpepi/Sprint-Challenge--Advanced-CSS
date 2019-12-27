@@ -1,13 +1,35 @@
 // Navigation code here
+@phone: ~'( max-width: 500px )';
+
+.center() {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+  }
+
 nav {
+    display: flex;
     h2 {
-        .flex;
+        .center;
         font-size: 4rem;
-        margin: 2% 43%;
     }
     ul {
-        .flex;
+        .center;
         font-size: 3rem;
-        margin: 2% 43%;
+        margin: 2% 10%;
+        justify-content: space-between;
     }
+
+@media @phone {
+    h2 {
+        display: inline-block;
+        margin-left: 25%;
+    }
+    ul {
+        flex-direction: row;
+        margin: 0%;
+        font-size: 2em;
+    }
+}
 }

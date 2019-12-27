@@ -1,14 +1,27 @@
 // Mixins Here
 
-.btn () {
-    color: white;
-    width: 5%;
-    height: 2%;
-    background-color: black;
-}
+@phone: ~'( max-width: 500px )';
 
-.flex (@margin, @font-size) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.button(@font, @bgcolor, @padding) {
+    background-color: @bgcolor;
+    border-radius: 5px;
+    color: @font;
+    font-size: 2em;
+    padding: @padding;
 }
+  
+.center() {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  
+  .fonts(@fam, @size){
+    font-family:@fam;
+    font-size:@size;
+  }
+
+    @media @phone {
+        display: flex;
+    }
