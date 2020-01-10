@@ -1,1 +1,29 @@
 // Navigation code here
+@phone: ~'( max-width: 500px )';
+
+
+nav {
+    @media @phone {
+        display: flex;
+        margin-left: 0;
+        width: 100%;
+        font-size: .8em;
+    h2 {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+        font-size: 2em;
+        justify-content: space-between;
+        margin: 0 auto;
+        @media @phone {
+            min-width: 500px;
+            font-size: .8em;
+        }
+    }
+}
+}

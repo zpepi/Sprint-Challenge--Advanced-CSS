@@ -1,1 +1,38 @@
 // Mixins Here
+
+@phone: ~'( max-width: 500px )';
+
+.button(@font, @bgcolor, @padding) {
+    background-color: @bgcolor;
+    border-radius: 5px;
+    color: @font;
+    font-size: 2em;
+    padding: @padding;
+    :hover {
+      background-color: white;
+      color: black;
+    }
+}
+  
+.center() {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+.margin() {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+  
+  
+  .fonts(@fam, @size){
+    font-family:@fam;
+    font-size:@size;
+  }
+
+    @media @phone {
+        display: flex;
+    }

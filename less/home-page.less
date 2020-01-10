@@ -1,9 +1,41 @@
 // Home Content
 
+@phone: ~'( max-width: 500px )';
+@wild-sand: #F6F6F6;
+@river-bend: #454A59;
+@sea-shell: #F1F1F1;
+@ebony-clay: #23293B;
+@shuttle-gray: #5E6164;
+@porcelain: #F6F7F8;
+@waterloo: #81848E;
+@btn-bg-color: #22283A;
+@border-real: #dee2e6;
+@bgcolor: black;
+@font: white;
+
+.button(@font, @bgcolor) {
+  background-color: @bgcolor;
+  border-radius: 5px;
+  color: @font;
+  font-size: 2em;
+  a:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
 .home {
 
   .intro {
+    img {
+      width: 100%;
+      height: auto;
 
+      @media @phone {
+        border-radius: 5px;
+        max-width: 500px;
+    }
+  }
     h2 {
       padding: 15px;
     }
@@ -13,14 +45,15 @@
     }
   
   }
+}
 
   .space-images {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
 
     img {
-      width: 28%;
+      width: 100%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
@@ -41,13 +74,18 @@
 
   .walk {
     margin-top: 60px;
-    border-top: 1px solid @main-border-color;
+    border-top: 1px solid main-border-color;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
 
     .walk-text {
-      width: 50%;
+      width: 100%;
+      @media @phone {
+          width: 500px;
+          margin: 0;
+          }
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -56,20 +94,46 @@
       p {
         margin-bottom: 26px;
       }
-
-      .btn {
-      }
     }
-
     .walk-img {
-      width: 46%;
+      width: 100%;
       margin-left: 4%;
-      
+      }
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
+  .btn {
+    .button(@bgcolor: black, @font: white);
+    background-color: @bgcolor;
+    border-radius: 5px;
+    color:@font;
+    font-size: 2em;
+      
+    .btn:hover {
+      background-color: white;
+      color: black;
     }
   }
-}// home
+    .space-images {
+      .blast {
+      min-width: 500px;
+      }
+      .sky {
+        visibility: hidden;
+      }
+      .launch {
+        visibility: hidden;
+      }
+    }
+    .visit-planets {
+      margin-bottom: 0;
+    }
+.btn {
+  .button(@bgcolor: black, @font: white);
+  background-color: @bgcolor;
+  border-radius: 5px;
+  color:@font;
+  font-size: 2em;
+}
