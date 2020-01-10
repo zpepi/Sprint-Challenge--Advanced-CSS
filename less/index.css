@@ -228,3 +228,78 @@ footer {
   height: auto;
   border-radius: 10px;
 }
+
+@media screen and ( max-width: 500px ) {
+  .header .intro {
+    display: flex;
+    width: 500px;
+  }
+  .home {
+    display: flex;
+    overflow: hidden;
+    margin-right: 0;
+  }
+  .home .space-images .blast {
+    min-width: 500px;
+  }
+  .home .space-images .sky {
+    visibility: hidden;
+  }
+  .home .space-images .launch {
+    visibility: hidden;
+  }
+  .home .visit-planets {
+    margin-bottom: 0;
+  }
+  .home .walk #walk-img {
+    width: 100%;
+  }
+  .home .walk #walk-img #walk-text {
+    width: 500px;
+    margin: 0;
+  }
+  .home .walk .btn {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+  }
+  nav h2 {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  nav .banner {
+    display: flex;
+    overflow: hidden;
+    margin-left: 50%;
+  }
+  @media ( max-width: 500px ) {
+    .nav {
+      display: flex;
+      margin-left: 0;
+      width: 100%;
+      font-size: 0.8em;
+    }
+    .nav h2 {
+      display: flex;
+    }
+    .nav ul {
+      display: flex;
+      min-width: 500px;
+      font-size: 0.8em;
+      margin: 0 auto;
+    }
+    .nav .banner {
+      display: flex;
+      margin-left: 50%;
+    }
+  }  
+}

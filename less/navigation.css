@@ -1,29 +1,26 @@
-nav {
-  display: flex;
-}
-nav h2 {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-  font-size: 4rem;
-}
-nav ul {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  font-size: 3rem;
-  margin: 2% 10%;
-  justify-content: space-between;
-}
 @media ( max-width: 500px ) {
+  nav {
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+    font-size: 0.8em;
+  }
   nav h2 {
-    display: inline-block;
-    margin-left: 25%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
   }
   nav ul {
+    display: flex;
     flex-direction: row;
-    margin: 0%;
     font-size: 2em;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+@media ( max-width: 500px ) and ( max-width: 500px ) {
+  nav ul {
+    min-width: 500px;
+    font-size: 0.8em;
   }
 }

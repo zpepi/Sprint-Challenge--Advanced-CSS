@@ -1,35 +1,29 @@
 // Navigation code here
 @phone: ~'( max-width: 500px )';
 
-.center() {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-  }
 
 nav {
-    display: flex;
+    @media @phone {
+        display: flex;
+        margin-left: 0;
+        width: 100%;
+        font-size: .8em;
     h2 {
-        .center;
-        font-size: 4rem;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
     }
+    
     ul {
-        .center;
-        font-size: 3rem;
-        margin: 2% 10%;
-        justify-content: space-between;
-    }
-
-@media @phone {
-    h2 {
-        display: inline-block;
-        margin-left: 25%;
-    }
-    ul {
+        display: flex;
         flex-direction: row;
-        margin: 0%;
         font-size: 2em;
+        justify-content: space-between;
+        margin: 0 auto;
+        @media @phone {
+            min-width: 500px;
+            font-size: .8em;
+        }
     }
 }
 }
